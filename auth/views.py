@@ -108,8 +108,7 @@ def login_view(request):
             return render(request, 'login.html') """
 
 
-def edit_view(request, id=None):
-
+def edit_view(request, id):
     user = get_object_or_404(User, id=id)
     if request.method == 'POST':
         form = UserEditForm(request.POST)
